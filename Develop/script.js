@@ -51,6 +51,9 @@ function generatePassword(){
     console.log(validPass);
     
     var password = "";
-
+    for (var i = 0; i < passwordLength.length(); i++){
+      var randomPassword;
+      
+    }
 }
   
