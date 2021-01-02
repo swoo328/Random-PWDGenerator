@@ -24,6 +24,7 @@ function generatePassword(){
     while(passwordLength < 8 || passwordLength > 129 || passwordLength == ""){
       var passwordLength = prompt("Choose a password with a length between 8 and 128");
     }
+    //Gives you choices for uppercase, lowercase, special character and numbers for the password
     var pickUpperCase = confirm("Do you want uppercase in your password")
     var pickLowerCase = confirm("Do you want lowercase in your password")
     var pickSpecialChar = confirm("Do you want special character in your password")
@@ -36,6 +37,7 @@ function generatePassword(){
       }
     //variable to store the password
     var validPass = [];
+    //
     if(pickUpperCase === true){
       validPass = validPass.concat(upperCase);
     }
@@ -50,10 +52,12 @@ function generatePassword(){
     }
     console.log(validPass);
     
-    var password = "";
-    for (var i = 0; i < passwordLength.length(); i++){
-      var randomPassword;
-      
+    //randomPassword is use to store the password that is being generated
+    var randomPassword = "";
+    for (var i = 0; i < passwordLength; i++){
+      //
+      randomPassword += validPass[Math.floor(Math.random() * validPass.length)];
     }
+    return randomPassword;
 }
   
