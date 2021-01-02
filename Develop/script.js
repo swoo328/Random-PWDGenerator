@@ -27,5 +27,30 @@ function generatePassword(){
     var pickUpperCase = confirm("Do you want uppercase in your password")
     var pickLowerCase = confirm("Do you want lowercase in your password")
     var pickSpecialChar = confirm("Do you want special character in your password")
-    var pickNum = confirm("Do you want numebers in your password")
-  }
+    var pickNum = confirm("Do you want numbers in your password")
+
+
+    //
+    if(pickUpperCase === false && pickLowerCase === false && pickSpecialChar === false && pickNum === false){
+        var pickAgain = prompt("Please pick combination again");
+      }
+    //variable to store the password
+    var validPass = [];
+    if(pickUpperCase === true){
+      validPass = validPass.concat(upperCase);
+    }
+    if (pickLowerCase === true){
+      validPass = validPass.concat(lowerCase);
+    }
+    if (pickSpecialChar === true){
+      validPass = validPass.concat(specialChar);
+    }
+    if (pickNum === true){
+      validPass = validPass.concat(num);
+    }
+    console.log(validPass);
+    
+    var password = "";
+
+}
+  
