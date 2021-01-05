@@ -4,7 +4,7 @@
 https://swoo328.github.io/Random-PWDGenerator/
 
 # Github URL 
-https://swoo328.github.io/Random-PWDGenerator/
+https://github.com/swoo328/Random-PWDGenerator
 
 # Screenshot
 
