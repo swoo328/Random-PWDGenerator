@@ -7,7 +7,7 @@ https://swoo328.github.io/Random-PWDGenerator/
 https://github.com/swoo328/Random-PWDGenerator
 
 # Screenshot
-![](assets/03-javascript-homework-demo.png)
+![](Assets/03-javascript-homework-demo.png)
 
 # Summary
 Created an application that generates a random password based on the user's choices.
