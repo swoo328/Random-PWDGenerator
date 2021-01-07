@@ -22,25 +22,27 @@ function generatePassword(){
     var passwordLength = false;
   //Prompt the user for the length of the password
   //the statment is gonna continue until the user input a number between 8-128
-    while(passwordLength < 8 || passwordLength > 128 || passwordLength == ""){
+    do{
       var passwordLength = prompt("Choose a password with a length between 8 and 128");
+      if(passwordLength < 8 || passwordLength > 128 || passwordLength == "" || isNaN(passwordLength))
+        alert("Please enter a valid number");
     }
+    while(passwordLength < 8 || passwordLength > 128 || passwordLength == "" || isNaN(passwordLength));
+  
+    
     //Confirmation choices if you want uppercase, lowercase, special character or numbers for the password
-    var pickUpperCase = confirm("Do you want uppercase in your password");
-    var pickLowerCase = confirm("Do you want lowercase in your password");
-    var pickSpecialChar = confirm("Do you want special character in your password");
-    var pickNum = confirm("Do you want numbers in your password");
+    //the statemenet is gonna continue until the user picks their criteria
+    //if the user doesn't pick anything for the criteria the program wiil tell the user to pick their critieria
+    do{
+      var pickUpperCase = confirm("Do you want uppercase in your password");
+      var pickLowerCase = confirm("Do you want lowercase in your password");
+      var pickSpecialChar = confirm("Do you want special character in your password");
+      var pickNum = confirm("Do you want numbers in your password");
+      if(pickUpperCase === false && pickLowerCase === false && pickSpecialChar === false && pickNum === false)
+        alert("Please pick your criteria again");
+    }
+    while(pickUpperCase === false && pickLowerCase === false && pickSpecialChar === false && pickNum === false);
 
-
-    //If i didn't pick any uppercase, lowercase, special character or numbers for the password
-    if(pickUpperCase === false && pickLowerCase === false && pickSpecialChar === false && pickNum === false){
-      // var passwordLength = prompt("Choose a password with a length between 8 and 128");
-      // var pickUpperCase = confirm("Do you want uppercase in your password");
-      // var pickLowerCase = confirm("Do you want lowercase in your password");
-      // var pickSpecialChar = confirm("Do you want special character in your password");
-      // var pickNum = confirm("Do you want numbers in your password");
-      alert("Please try again?");
-      }
     //variable to store the values of uppercase, lowercase, special character and numbers into the array
     var validPass = [];
     //If confirm is true all the values of upper case in the array are gonna be stored into an empty array
@@ -70,4 +72,3 @@ function generatePassword(){
     }
     return randomPassword;
 }
-  
